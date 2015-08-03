@@ -5,7 +5,8 @@ CONFIG -= qt
 CONFIG +=c++11
 
 SOURCES += main.cpp \
-    game.cpp
+    game.cpp \
+    gamestatestart.cpp
 
 LIBS += -lsfml-system -lsfml-graphics -lsfml-window
 
@@ -14,5 +15,6 @@ qtcAddDeployment()
 
 HEADERS += \
     gamestate.hpp \
-    game.hpp
+    game.hpp \
+    gamestatestart.h
 

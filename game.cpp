@@ -21,8 +21,7 @@ void Game::popState()
 
 void Game::changeState(GameState *state)
 {
-  if(!this->states.empty())
-    popState();
+  if(!this->states.empty()) popState();
   pushState(state);
   return;
 }
@@ -33,7 +32,7 @@ GameState *Game::peekState()
   return this->states.top();
 }
 
-void Game::GameLoop()
+void Game::gameLoop()
 {
   sf::Clock clock;
 

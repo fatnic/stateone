@@ -16,7 +16,7 @@ public:
     void changeState(GameState* state);
     GameState* peekState();
 
-    void GameLoop();
+    void gameLoop();
 
     Game();
     ~Game();
