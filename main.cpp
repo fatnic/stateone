@@ -1,10 +1,10 @@
 #include "game.hpp"
-#include "gamestatestart.h"
+#include "mainmenu.hpp"
 
 int main()
 {
   Game game;
-  game.pushState(new GameStateStart(&game));
+  game.pushState(new MainMenu(&game));
   game.gameLoop();
   return 0;
 }

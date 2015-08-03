@@ -34,18 +34,13 @@ GameState *Game::peekState()
 
 void Game::gameLoop()
 {
-  sf::Clock clock;
-
   while(this->window.isOpen())
   {
-    sf::Time elapsed = clock.restart();
-    float dt = elapsed.asSeconds();
-
     if(peekState() == nullptr) continue;
     peekState()->handleInput();
-    peekState()->update(dt);
+    peekState()->update();
     this->window.clear(sf::Color::Black);
-    peekState()->draw(dt);
+    peekState()->draw();
     this->window.display();
   }
 }
